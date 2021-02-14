@@ -16,13 +16,9 @@
         zoom: 8,
       });
     }
-  </script>
-  <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd3MjsurBTEZFEF7aZkPWGBPVXRZvU_QM&callback=initMap&libraries=&v=weekly"
-        defer
-      ></script>
-      <link rel="stylesheet" type="text/css" href="./style.css" />
-      <script src="./index.js"></script>
+  </script> 
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <script src="./index.js"></script>
   </head>
   <body>
     <div>
@@ -45,5 +41,9 @@
     </div>
 
     <div id="map"></div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd3MjsurBTEZFEF7aZkPWGBPVXRZvU_QM&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
   </body>
 </html>
