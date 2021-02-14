@@ -12,26 +12,25 @@
   <link rel="stylesheet" type="text/css" href="main.css">
   <script src="jquery-3.5.1.js"></script>
   <script type="text/javascript">
-    var center = new google.maps.LatLng(51.0447,-114.0719);
-    var mapOptions = {
-      zoom: 12,
-      center: center
+    let map;
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById("map"), {
+        center: { 
+          lat: 51.0447, 
+          lng: -114.0719 },
+        zoom: 12,
+      });
     }
-    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
   </script> 
-  <!--script provided by Chris Metcalf at https://dev.socrata.com/blog/2014/05/31/google-maps.html
+  <!-- Script provided by Chris Metcalf from https://dev.socrata.com/blog/2014/05/31/google-maps.html
   <script type="text/javascript">
-    url = 'https://data.calgary.ca/resource/vdjc-pybd.json?tradename=subway';
+    url = 'https://data.calgary.ca/resource/vdjc-pybd.json';
 
     // Retrieve our data and plot it
     $.getJSON(url, function(data, textstatus) {
           $.each(data, function(i, entry) {
             // Deal with our locations
-            var marker = new google.maps.Marker({
-              position: new google.maps.LatLng(entry.location_1.coordinates[1], 
-                                               entry.location_1.coordinates[0]),
-              map: map,
-              title: location.name
           });
     });
 
