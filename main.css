@@ -131,7 +131,7 @@ label, input, button, select {
 	align-items: center;
 	opacity: 0.8;
 	transition: opacity 0.3s, box-shadow 0.3s;
-	z-index: 100;
+	z-index: 1000000;
 }
 #mainbar:hover {
 	opacity: 0.95;
@@ -162,7 +162,7 @@ label, input, button, select {
 #recContainer p {
 	max-height: 80%;
 	overflow-y: scroll;
-	z-index: 100;
+	z-index: 1000000;
 }
 
 input {
