@@ -35,7 +35,7 @@
       <link rel="stylesheet" type="text/css" href="./style.css" />
       <script src="./index.js"></script>
   </head>
-  <body class="mapviewph">
+  <body>
     <div>
       <nav id="mainbar">
         <img src="pinstart-icon.png" >

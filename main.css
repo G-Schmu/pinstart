@@ -142,10 +142,6 @@ label, input, button, select {
 	height: 3em;
 }
 
-.mapviewph {
-	background-image: url("./placeholder-background.png");
-}
-
 #recContainer {
 	background-color: #505454;
 	color: #F7F7F7;
