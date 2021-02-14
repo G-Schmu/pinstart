@@ -24,7 +24,7 @@
   <body>
     <div>
       <nav id="mainbar">
-        <img src="pinstart-icon.png" >
+        <a href="index.php"><img src="pinstart-icon.png" ></a>
         <input type="search" name="businesssearch">
         <h2>in</h2>
         <input type="text" value="Calgary" readonly>
