@@ -12,7 +12,8 @@
 
     function initMap() {
       map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: -34.397, lng: 150.644 },
+        center: { lat: 51.154516681325134, lng:  
+-114.15820766732288 },
         zoom: 8,
       });
     }
@@ -23,7 +24,7 @@
   <body>
     <div>
       <nav id="mainbar">
-        <img src="pinstart-icon.png" >
+        <a href="index.php"><img src="pinstart-icon.png" ></a>
         <input type="search" name="businesssearch">
         <h2>in</h2>
         <input type="text" value="Calgary" readonly>
