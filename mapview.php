@@ -19,7 +19,7 @@
     }
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
   </script> 
-  <!--script provided by Chris Metcalf at https://dev.socrata.com/blog/2014/05/31/google-maps.html-->
+  <!--script provided by Chris Metcalf at https://dev.socrata.com/blog/2014/05/31/google-maps.html
   <script type="text/javascript">
     url = 'https://data.calgary.ca/resource/vdjc-pybd.json?tradename=subway';
 
@@ -36,6 +36,7 @@
     });
 
   </script>
+-->
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <script src="./index.js"></script>
   </head>
