@@ -12,7 +12,7 @@
 	<div class="aligncenter" id="indexmenu">
 		<img src="pinstart-2.png" width="400em" id="indexmainlogo">
 		<div id="searchbar">
-			<form name="search">
+			<form name="search" action="mapview.php">
 			<h1>Where's the best location for a new</h1>
 				<div class="hor"><input type="search" id="indexsearch" name="businesssearch" placeholder="Business Name/Idea">
         		<button id="right-arrow"></div>
