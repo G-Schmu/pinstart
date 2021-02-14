@@ -1,23 +1,41 @@
 <?php 
 	if(!isset($_SESSION)) 
 		session_start(); 
+
+  if(isset($_GET['businesssearch']))
+    $searchterm = $_GET['businesssearch'];
 ?>
 <!DOCTYPE html>
 <html>
   <head>
   <title>pinstart - Find your next business.</title>
   <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="jquery-3.5.1.js"></script>
   <script type="text/javascript">
-    let map;
-
-    function initMap() {
-      map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 51.154516681325134, lng:  
--114.15820766732288 },
-        zoom: 13,
-      });
+    var center = new google.maps.LatLng(51.0447,-114.0719);
+    var mapOptions = {
+      zoom: 12,
+      center: center
     }
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
   </script> 
+  <!--script provided by Chris Metcalf at https://dev.socrata.com/blog/2014/05/31/google-maps.html-->
+  <script type="text/javascript">
+    url = 'https://data.calgary.ca/resource/vdjc-pybd.json?tradename=subway';
+
+    // Retrieve our data and plot it
+    $.getJSON(url, function(data, textstatus) {
+          $.each(data, function(i, entry) {
+            // Deal with our locations
+            var marker = new google.maps.Marker({
+              position: new google.maps.LatLng(entry.location_1.coordinates[1], 
+                                               entry.location_1.coordinates[0]),
+              map: map,
+              title: location.name
+          });
+    });
+
+  </script>
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <script src="./index.js"></script>
   </head>
@@ -29,15 +47,19 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd3MjsurBTEZFEF7aZkPWGBPVXRZvU_QM&callback=initMap&libraries=&v=weekly"
         async
       ></script>
-      
+
       <nav id="mainbar">
         <a href="index.php"><img src="pinstart-icon.png" ></a>
-        <input type="search" name="businesssearch">
+        <input type="search" name="businesssearch" <?php if(isset($searchterm))echo "value=\"$searchterm\""; ?>>
         <h2>in</h2>
         <input type="text" value="Calgary" readonly>
         <img src="right-arrow.png" alt="->">
       </nav>
 
+      <div>
+        <div id="recTabs">
+          <p>< &#9679;&#x25CB;&#x25CB;&#x25CB;&#x25CB;&#x25CB; ></p>
+        </div>
       <div id="recContainer">
         <h2>Recommended</h2>
         <hr>
