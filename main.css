@@ -70,6 +70,11 @@ label, input, button, select {
   background-color: #a8bbbf;
 }
 
+#map {
+	width: 100%;
+	height: 100vh;
+}
+
 #right-arrow {
 	width: 4em;
 	background-image: url("./right-arrow.png");
@@ -135,10 +140,6 @@ label, input, button, select {
 }
 #mainbar img {
 	height: 3em;
-}
-
-.mapviewph {
-	background-image: url("./placeholder-background.png");
 }
 
 #recContainer {
